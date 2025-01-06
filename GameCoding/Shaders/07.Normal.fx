@@ -1,8 +1,10 @@
+
 matrix World;
 matrix View;
 matrix Projection;
 Texture2D Texture0;
 float3 LightDir;
+
 
 struct VertexInput
 {

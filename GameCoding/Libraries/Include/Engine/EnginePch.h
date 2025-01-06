@@ -35,6 +35,10 @@ using namespace Microsoft::WRL;
 
 #include <FX11/d3dx11effect.h>
 
+#include"Assimp/Importer.hpp"
+#include"Assimp/scene.h"
+#include"Assimp/postprocess.h"
+
 // Libs
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "d3dcompiler.lib")
@@ -42,9 +46,11 @@ using namespace Microsoft::WRL;
 #ifdef _DEBUG
 #pragma comment(lib, "DirectXTex/DirectXTex_debug.lib")
 #pragma comment(lib, "FX11/Effects11d.lib")
+#pragma  comment(lib,"Assimp/assimp-vc143-mtd.lib")
 #else
 #pragma comment(lib, "DirectXTex/DirectXTex.lib")
 #pragma comment(lib, "FX11/Effects11.lib")
+#pragma  comment(lib,"Assimp/assimp-vc143-mtd.lib")
 #endif
 
 // Managers
@@ -53,18 +59,9 @@ using namespace Microsoft::WRL;
 #include "InputManager.h"
 #include "TimeManager.h"
 #include "ResourceManager.h"
+#include "RenderManager.h"
 
-#define CHECK(p)	assert(SUCCEEDED(p))
-#define GAME		GET_SINGLE(Game)		
-#define GRAPHICS	GET_SINGLE(Graphics)
-#define DEVICE		GRAPHICS->GetDevice()
-#define DC			GRAPHICS->GetDeviceContext()
-#define INPUT		GET_SINGLE(InputManager)
-#define TIME		GET_SINGLE(TimeManager)
-#define DT			TIME->GetDeltaTime()
-#define RESOURCES	GET_SINGLE(ResourceManager)
 
-// Engine
 #include "VertexData.h"
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"

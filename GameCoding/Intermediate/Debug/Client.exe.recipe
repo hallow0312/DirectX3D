@@ -7,6 +7,12 @@
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\00.Global.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\00.Light.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
       <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\01.Triangle.cso</FullPath>
     </ContentFile>
     <ContentFile>
@@ -26,6 +32,27 @@
     </ContentFile>
     <ContentFile>
       <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\07.Normal.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\08.GlobalTest.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\09.Lighting_Ambient.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\10.Lighting_Diffuse.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\11.Lighting_Specular.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\12.Lighting_Emissive.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\13.Lighting.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\14.NormalMapping.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
