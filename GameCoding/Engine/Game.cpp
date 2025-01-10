@@ -2,6 +2,8 @@
 #include "Game.h"
 #include "IExecute.h"
 
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
 WPARAM Game::Run(GameDesc& desc)
 {
 	_desc = desc;
@@ -17,7 +19,7 @@ WPARAM Game::Run(GameDesc& desc)
 	GRAPHICS->Init(_desc.hWnd);
 	TIME->Init();
 	INPUT->Init(_desc.hWnd);
-	
+	GUI->Init();
 	_desc.app->Init();
 
 	MSG msg = { 0 };
@@ -79,6 +81,8 @@ BOOL Game::InitInstance(int cmdShow)
 
 LRESULT CALLBACK Game::WndProc(HWND handle, UINT message, WPARAM wParam, LPARAM lParam)
 {
+	if (ImGui_ImplWin32_WndProcHandler(handle, message, wParam, lParam))
+		return true;
 	switch (message)
 	{
 	case WM_SIZE:
@@ -98,10 +102,10 @@ void Game::Update()
 	INPUT->Update();
 
 	GRAPHICS->RenderBegin();
-
+	GUI->Update();
 	_desc.app->Update();
 	_desc.app->Render();
-
+	GUI->Render();
 	GRAPHICS->RenderEnd();
 }
 

@@ -23,7 +23,7 @@ public:
 
 	template<typename T>
 	ResourceType GetResourceType();
-
+	shared_ptr<Texture> GetOrAddTexture(const wstring& key, const wstring& path);
 private:
 	void CreateDefaultMesh();
 
