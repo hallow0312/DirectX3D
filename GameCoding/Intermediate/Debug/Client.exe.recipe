@@ -54,6 +54,18 @@
     <ContentFile>
       <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\14.NormalMapping.cso</FullPath>
     </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\15.ModelDemo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\16.AnimationDemo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\17.TweenDemo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\18.SkyDemo.cso</FullPath>
+    </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />

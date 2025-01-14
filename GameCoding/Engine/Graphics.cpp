@@ -77,23 +77,25 @@ void Graphics::CreateRenderTargetView()
 
 void Graphics::CreateDepthStencilView()
 {
-	D3D11_TEXTURE2D_DESC desc = { 0 };
-	ZeroMemory(&desc, sizeof(desc));
-	desc.Width = static_cast<uint32>(GAME->GetGameDesc().width);
-	desc.Height = static_cast<uint32>(GAME->GetGameDesc().height);
-	desc.MipLevels = 1;
-	desc.ArraySize = 1;
-	desc.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
-	desc.SampleDesc.Count = 1;
-	desc.SampleDesc.Quality = 0;
-	desc.Usage = D3D11_USAGE_DEFAULT;
-	desc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
-	desc.CPUAccessFlags = 0;
-	desc.MiscFlags = 0;
+	{
+		D3D11_TEXTURE2D_DESC desc = { 0 };
+		ZeroMemory(&desc, sizeof(desc));
+		desc.Width = static_cast<uint32>(GAME->GetGameDesc().width);
+		desc.Height = static_cast<uint32>(GAME->GetGameDesc().height);
+		desc.MipLevels = 1;
+		desc.ArraySize = 1;
+		desc.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
+		desc.SampleDesc.Count = 1;
+		desc.SampleDesc.Quality = 0;
+		desc.Usage = D3D11_USAGE_DEFAULT;
+		desc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
+		desc.CPUAccessFlags = 0;
+		desc.MiscFlags = 0;
 
-	HRESULT hr =DEVICE->CreateTexture2D(&desc,nullptr, _depthStencilTexture.GetAddressOf());
-	CHECK(hr);
-
+		HRESULT hr = DEVICE->CreateTexture2D(&desc, nullptr, _depthStencilTexture.GetAddressOf());
+		CHECK(hr);
+	}
+	
 	{
 		D3D11_DEPTH_STENCIL_VIEW_DESC desc;
 		ZeroMemory(&desc, sizeof(desc));
@@ -104,6 +106,7 @@ void Graphics::CreateDepthStencilView()
 		HRESULT hr = DEVICE->CreateDepthStencilView(_depthStencilTexture.Get(), &desc, _depthStencilView.GetAddressOf());
 		CHECK(hr);
 	}
+
 }
 
 void Graphics::SetViewport()

@@ -16,9 +16,10 @@ public:
 
 	void SetMesh(shared_ptr<Mesh> mesh) { _mesh = mesh; }
 	void SetMaterial(shared_ptr<Material> material) { _material = material; }
-	//Legacy
-	void SetTexture(shared_ptr<Texture> texture) {}
-	void SetShader(shared_ptr<Shader> shader) {}
+
+	// Legacy
+	void SetTexture(shared_ptr<Texture> texture) { }
+	void SetShader(shared_ptr<Shader> shader) {  }
 
 private:
 	shared_ptr<Mesh> _mesh;

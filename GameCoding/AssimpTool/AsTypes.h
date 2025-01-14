@@ -93,3 +93,29 @@ struct asBoneWeights
 	vector<Pair> boneWeights;
 
 };
+struct asKeyFrameData
+{
+	float time;
+	Vec3 scale;
+	Quaternion rotation;
+	Vec3 translation;
+};
+struct asKeyFrame
+{
+	string boneName;
+	vector<asKeyFrameData>transforms;
+};
+struct asAnimation
+{
+	string name;
+	uint32  frameCount;
+	float frameRate;
+	float duration;
+	vector<shared_ptr<asKeyFrame>>keyframes; 
+};
+
+struct asAnimationNode
+{
+	aiString name;
+	vector < asKeyFrameData> keyframe;
+};

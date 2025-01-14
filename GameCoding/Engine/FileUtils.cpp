@@ -3,6 +3,7 @@
 
 FileUtils::FileUtils()
 {
+
 }
 
 FileUtils::~FileUtils()
@@ -11,9 +12,9 @@ FileUtils::~FileUtils()
 	{
 		::CloseHandle(_handle);
 		_handle = INVALID_HANDLE_VALUE;
-
 	}
 }
+
 
 void FileUtils::Open(wstring filePath, FileMode mode)
 {
@@ -27,12 +28,12 @@ void FileUtils::Open(wstring filePath, FileMode mode)
 			CREATE_ALWAYS,
 			FILE_ATTRIBUTE_NORMAL,
 			nullptr
-
 		);
 	}
 	else
 	{
-		_handle = ::CreateFile(
+		_handle = ::CreateFile
+		(
 			filePath.c_str(),
 			GENERIC_READ,
 			FILE_SHARE_READ,
@@ -42,27 +43,34 @@ void FileUtils::Open(wstring filePath, FileMode mode)
 			nullptr
 		);
 	}
+
 	assert(_handle != INVALID_HANDLE_VALUE);
 }
+
+
 void FileUtils::Write(void* data, uint32 dataSize)
 {
 	uint32 numOfBytes = 0;
 	assert(::WriteFile(_handle, data, dataSize, reinterpret_cast<LPDWORD>(&numOfBytes), nullptr));
 }
-void FileUtils::Write(const string& data) //가변적인데이터 
-{
-	uint32 size = (uint32)data.size(); //문자열의 길이를 먼저 넣음 
-	Write(size);
-	if (data.size() == 0)return;
-	//그다음 문자열 
-	Write((void*)data.data(), size);
 
+void FileUtils::Write(const string& data)
+{
+	uint32 size = (uint32)data.size();
+	Write(size);
+
+	if (data.size() == 0)
+		return;
+
+	Write((void*)data.data(), size);
 }
+
 void FileUtils::Read(void** data, uint32 dataSize)
 {
 	uint32 numOfBytes = 0;
 	assert(::ReadFile(_handle, *data, dataSize, reinterpret_cast<LPDWORD>(&numOfBytes), nullptr));
 }
+
 void FileUtils::Read(OUT string& data)
 {
 	uint32 size = Read<uint32>();

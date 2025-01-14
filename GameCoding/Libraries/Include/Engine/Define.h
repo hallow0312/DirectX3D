@@ -23,4 +23,3 @@ public:										\
 #define RESOURCES	GET_SINGLE(ResourceManager)
 #define RENDER		GET_SINGLE(RenderManager)
 #define GUI			GET_SINGLE(ImGuiManager)
-// Engine

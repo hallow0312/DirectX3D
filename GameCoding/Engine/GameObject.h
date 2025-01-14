@@ -5,7 +5,7 @@ class Transform;
 class Camera;
 class MeshRenderer;
 class ModelRenderer;
-//class Animator;
+class ModelAnimator;
 
 class GameObject : public enable_shared_from_this<GameObject>
 {
@@ -23,8 +23,8 @@ public:
 	shared_ptr<Transform> GetTransform();
 	shared_ptr<Camera> GetCamera();
 	shared_ptr<MeshRenderer> GetMeshRenderer();
-	shared_ptr<ModelRenderer>GetModelRenderer();
-	//shared_ptr<Animator> GetAnimator();
+	shared_ptr<ModelRenderer> GetModelRenderer();
+	shared_ptr<ModelAnimator> GetModelAnimator();
 
 	shared_ptr<Transform> GetOrAddTransform();
 	void AddComponent(shared_ptr<Component> component);

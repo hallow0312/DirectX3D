@@ -30,7 +30,7 @@ private:
 	// RTV
 	ComPtr<ID3D11RenderTargetView> _renderTargetView;
 
-	//DSV
+	// DSV
 	ComPtr<ID3D11Texture2D> _depthStencilTexture;
 	ComPtr<ID3D11DepthStencilView> _depthStencilView;
 

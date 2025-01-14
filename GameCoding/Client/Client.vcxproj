@@ -19,30 +19,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="04. CameraDemo.h" />
-    <ClInclude Include="10.GlobalShaderDemo.h" />
-    <ClInclude Include="11.DepthStencilDemo.h" />
-    <ClInclude Include="12.AmbientDemo.h" />
-    <ClInclude Include="13.DiffuseDemo.h" />
-    <ClInclude Include="14.SpecularDemo.h" />
-    <ClInclude Include="15.EmissiveDemo.h" />
-    <ClInclude Include="16.LightingDemo.h" />
-    <ClInclude Include="17.MaterialDemo.h" />
-    <ClInclude Include="18.NormalMappingDemo.h" />
+    <ClInclude Include="10. GlobalTestDemo.h" />
+    <ClInclude Include="11. DepthStencilDemo.h" />
+    <ClInclude Include="12. AmbientDemo.h" />
+    <ClInclude Include="13. DiffuseDemo.h" />
+    <ClInclude Include="14. SpecularDemo.h" />
+    <ClInclude Include="15. EmissiveDemo.h" />
+    <ClInclude Include="16. LightingDemo.h" />
+    <ClInclude Include="17. MaterialDemo.h" />
+    <ClInclude Include="18. NormalMappingDemo.h" />
     <ClInclude Include="CameraScript.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="04. CameraDemo.cpp" />
-    <ClCompile Include="11.DepthStencilDemo.cpp" />
-    <ClCompile Include="12.AmbientDemo.cpp" />
-    <ClCompile Include="13.DiffuseDemo.cpp" />
-    <ClCompile Include="14.SpecularDemo.cpp" />
-    <ClCompile Include="15.EmissiveDemo.cpp" />
-    <ClCompile Include="16.LightingDemo.cpp" />
-    <ClCompile Include="17.MaterialDemo.cpp" />
-    <ClCompile Include="18.NormalMappingDemo.cpp" />
+    <ClCompile Include="10. GlobalTestDemo.cpp" />
+    <ClCompile Include="11. DepthStencilDemo.cpp" />
+    <ClCompile Include="12. AmbientDemo.cpp" />
+    <ClCompile Include="13. DiffuseDemo.cpp" />
+    <ClCompile Include="14. SpecularDemo.cpp" />
+    <ClCompile Include="15. EmissiveDemo.cpp" />
+    <ClCompile Include="16. LightingDemo.cpp" />
+    <ClCompile Include="17. MaterialDemo.cpp" />
+    <ClCompile Include="18. NormalMappingDemo.cpp" />
     <ClCompile Include="CameraScript.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="pch.cpp">
@@ -53,12 +52,7 @@
   <ItemGroup>
     <FxCompile Include="..\Shaders\00.Global.fx" />
     <FxCompile Include="..\Shaders\00.Light.fx" />
-    <FxCompile Include="..\Shaders\01.Triangle.fx">
-      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </EntryPointName>
-      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Effect</ShaderType>
-      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
-    </FxCompile>
+    <FxCompile Include="..\Shaders\01.Triangle.fx" />
     <FxCompile Include="..\Shaders\02.Quad.fx" />
     <FxCompile Include="..\Shaders\03.ConstantBuffer.fx" />
     <FxCompile Include="..\Shaders\04.Texture.fx" />
@@ -73,6 +67,9 @@
     <FxCompile Include="..\Shaders\13.Lighting.fx" />
     <FxCompile Include="..\Shaders\14.NormalMapping.fx" />
     <FxCompile Include="..\Shaders\15.ModelDemo.fx" />
+    <FxCompile Include="..\Shaders\16.AnimationDemo.fx" />
+    <FxCompile Include="..\Shaders\17.TweenDemo.fx" />
+    <FxCompile Include="..\Shaders\18.SkyDemo.fx" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -206,6 +203,15 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)Libraries\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
+    <FxCompile>
+      <EntryPointName />
+    </FxCompile>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

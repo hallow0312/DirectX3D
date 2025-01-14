@@ -23,6 +23,3 @@ public:
 	static void CreateSphere(shared_ptr<Geometry<VertexTextureNormalTangentData>> geometry);
 };
 
-
-
-

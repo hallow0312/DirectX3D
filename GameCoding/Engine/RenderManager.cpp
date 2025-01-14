@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "RenderManager.h"
-#include"Camera.h"
+#include "Camera.h"
+
 void RenderManager::Init(shared_ptr<Shader> shader)
 {
 	_shader = shader;
@@ -15,15 +16,23 @@ void RenderManager::Init(shared_ptr<Shader> shader)
 
 	_lightBuffer = make_shared<ConstantBuffer<LightDesc>>();
 	_lightBuffer->Create();
-	_lighetEffectBuffer = _shader->GetConstantBuffer("LightBuffer");
+	_lightEffectBuffer = _shader->GetConstantBuffer("LightBuffer");
 
-	_materialBuffer = make_shared<ConstantBuffer<MaterialDesc>>(); 
+	_materialBuffer = make_shared<ConstantBuffer<MaterialDesc>>();
 	_materialBuffer->Create();
 	_materialEffectBuffer = _shader->GetConstantBuffer("MaterialBuffer");
 
 	_boneBuffer = make_shared<ConstantBuffer<BoneDesc>>();
 	_boneBuffer->Create();
 	_boneEffectBuffer = _shader->GetConstantBuffer("BoneBuffer");
+
+	_keyframeBuffer = make_shared<ConstantBuffer<KeyframeDesc>>();
+	_keyframeBuffer->Create();
+	_keyframeEffectBuffer = _shader->GetConstantBuffer("KeyframeBuffer");
+
+	_tweenBuffer = make_shared<ConstantBuffer<TweenDesc>>();
+	_tweenBuffer->Create();
+	_tweenEffectBuffer = _shader->GetConstantBuffer("TweenBuffer");
 }
 
 void RenderManager::Update()
@@ -31,15 +40,14 @@ void RenderManager::Update()
 	PushGlobalData(Camera::S_MatView, Camera::S_MatProjection);
 }
 
-void RenderManager::PushGlobalData(const Matrix& view, const Matrix& proejection)
+void RenderManager::PushGlobalData(const Matrix& view, const Matrix& projection)
 {
-	_globalDesc.V = view;
-	_globalDesc.P = proejection;
-	_globalDesc.VP = view * proejection;
-	_globalDesc.Vinv = view.Invert();
+	_globalDesc.V = view; 
+	_globalDesc.P = projection;
+	_globalDesc.VP = view * projection;
+	_globalDesc.VInv = view.Invert();
 	_globalBuffer->CopyData(_globalDesc);
 	_globalEffectBuffer->SetConstantBuffer(_globalBuffer->GetComPtr().Get());
-		
 }
 
 void RenderManager::PushTransformData(const TransformDesc& desc)
@@ -53,7 +61,7 @@ void RenderManager::PushLightData(const LightDesc& desc)
 {
 	_lightDesc = desc;
 	_lightBuffer->CopyData(_lightDesc);
-	_lighetEffectBuffer->SetConstantBuffer(_lightBuffer->GetComPtr().Get());
+	_lightEffectBuffer->SetConstantBuffer(_lightBuffer->GetComPtr().Get());
 }
 
 void RenderManager::PushMaterialData(const MaterialDesc& desc)
@@ -68,4 +76,18 @@ void RenderManager::PushBoneData(const BoneDesc& desc)
 	_boneDesc = desc;
 	_boneBuffer->CopyData(_boneDesc);
 	_boneEffectBuffer->SetConstantBuffer(_boneBuffer->GetComPtr().Get());
+}
+
+void RenderManager::PushKeyframeData(const KeyframeDesc& desc)
+{
+	_keyframeDesc = desc;
+	_keyframeBuffer->CopyData(_keyframeDesc);
+	_keyframeEffectBuffer->SetConstantBuffer(_keyframeBuffer->GetComPtr().Get());
+}
+
+void RenderManager::PushTweenData(const TweenDesc& desc)
+{
+	_tweenDesc = desc;
+	_tweenBuffer->CopyData(_tweenDesc);
+	_tweenEffectBuffer->SetConstantBuffer(_tweenBuffer->GetComPtr().Get());
 }
