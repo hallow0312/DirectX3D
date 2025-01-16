@@ -66,6 +66,18 @@
     <ContentFile>
       <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\18.SkyDemo.cso</FullPath>
     </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\19.InstancingDemo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\20.MeshInstancingDemo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\21.ModelInstancingDemo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\22.AnimInstancingDemo.cso</FullPath>
+    </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
