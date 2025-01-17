@@ -31,7 +31,7 @@ Texture2DArray TransformMap;
 
 matrix GetAnimationMatrix(VertexTextureNormalTangentBlend input)
 {
-	float indices[4] = { input.blendIndicies.x, input.blendIndicies.y, input.blendIndicies.z, input.blendIndicies.w };
+	float indices[4] = { input.blendIndices.x, input.blendIndices.y, input.blendIndices.z, input.blendIndices.w };
 	float weights[4] = { input.blendWeights.x, input.blendWeights.y, input.blendWeights.z, input.blendWeights.w };
 
 	int animIndex = Keyframes.animIndex;
