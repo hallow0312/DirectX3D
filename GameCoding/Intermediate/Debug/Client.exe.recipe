@@ -84,6 +84,18 @@
     <ContentFile>
       <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\23.RenderDemo.cso</FullPath>
     </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\24.RawBufferDemo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\25.GroupDemo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\26.TextureBufferDemo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\27.StructureBufferDemo.cso</FullPath>
+    </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
