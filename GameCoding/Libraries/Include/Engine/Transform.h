@@ -11,6 +11,8 @@ public:
 	virtual void Awake() override;
 	virtual void Update() override;
 
+	static Vec3 ToEulerAngles(Quaternion q);
+
 	void UpdateTransform();
 
 	// Local

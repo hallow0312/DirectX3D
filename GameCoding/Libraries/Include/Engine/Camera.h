@@ -7,16 +7,18 @@ enum class ProjectionType
 	Orthographic, // 직교 투영
 };
 
-class Camera :  public Component
+class Camera : public Component
 {
 	using Super = Component;
 public:
 	Camera();
 	virtual ~Camera();
-	
-	virtual void Update() override;
 
+	virtual void Update() override;
+	
 	void UpdateMatrix();
+	void SetProjectionType(ProjectionType type) { _type = type; }
+	ProjectionType GetProjectionType() { return _type; }
 
 	void SetNear(float value) { _near = value; }
 	void SetFar(float value) { _far = value; }
@@ -27,7 +29,10 @@ public:
 	Matrix& GetViewMatrix() { return _matView; }
 	Matrix& GetProjectionMatrix() { return _matProjection; }
 
+	float GetWidth() { return _width; }
+	float GetHeight() { return  _height; }
 private:
+	ProjectionType _type = ProjectionType::Perspective;
 	Matrix _matView = Matrix::Identity;
 	Matrix _matProjection = Matrix::Identity;
 
@@ -40,4 +45,20 @@ private:
 public:
 	static Matrix S_MatView;
 	static Matrix S_MatProjection;
+public:
+	void SortGameObject();
+	void Render_Forward();
+	void SetCullingMaskLayerOnOff(uint8 layer, bool on)
+	{
+		if (on)
+			_cullingMask != (1 << layer);
+		else
+			_cullingMask &= ~(1 << layer);
+	}
+	void SetCullingMaskAll() {SetCullingMask(UINT32_MAX);}
+	void SetCullingMask(uint32 mask) { _cullingMask = mask; }
+	bool IsCulled(uint8 layer) { return (_cullingMask & (1 << layer)) != 0; }
+private:
+	uint32 _cullingMask = 0;
+	vector<shared_ptr<GameObject>>_vecForward;
 };

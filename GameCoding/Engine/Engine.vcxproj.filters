@@ -46,6 +46,12 @@
     <Filter Include="04. Component\Collision">
       <UniqueIdentifier>{982c01b8-b03c-4774-94a1-97f8206200db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="99. Headers\Math">
+      <UniqueIdentifier>{c0fc4a9d-4823-4002-bc7d-981377e58bfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06. UI&amp;eEffect">
+      <UniqueIdentifier>{798e47b3-e3b9-487e-80f1-9625d111e530}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -234,6 +240,24 @@
     <ClInclude Include="AABBBoxCollider.h">
       <Filter>04. Component\Collision</Filter>
     </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>04. Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Primitive3D.h">
+      <Filter>99. Headers\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtils.h">
+      <Filter>99. Headers\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>06. UI&amp;eEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Billboard.h">
+      <Filter>06. UI&amp;eEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="SnowBillboard.h">
+      <Filter>06. UI&amp;eEffect</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -409,6 +433,24 @@
     </ClCompile>
     <ClCompile Include="AABBBoxCollider.cpp">
       <Filter>04. Component\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>04. Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Primitive3D.cpp">
+      <Filter>99. Headers\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtils.cpp">
+      <Filter>99. Headers\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>06. UI&amp;eEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Billboard.cpp">
+      <Filter>06. UI&amp;eEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="SnowBillboard.cpp">
+      <Filter>06. UI&amp;eEffect</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

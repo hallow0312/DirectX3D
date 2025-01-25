@@ -8,6 +8,10 @@
 #include "ModelAnimator.h"
 #include "Light.h"
 #include"BaseCollider.h"
+#include"Terrain.h"
+#include"Button.h"
+#include"Billboard.h"
+#include"SnowBillboard.h"
 GameObject::GameObject()
 {
 	
@@ -137,6 +141,18 @@ shared_ptr<BaseCollider> GameObject::GetCollider()
 	return static_pointer_cast<BaseCollider>(component);
 }
 
+shared_ptr<Terrain> GameObject::GetTerrain()
+{
+	shared_ptr<Component> component = GetFixedComponent(ComponentType::Terrain);
+	return static_pointer_cast<Terrain>(component);
+}
+
+shared_ptr<Button> GameObject::GetButton()
+{
+	shared_ptr<Component> component = GetFixedComponent(ComponentType::Button);
+	return static_pointer_cast<Button>(component);
+}
+
 std::shared_ptr<Transform> GameObject::GetOrAddTransform()
 {
 	if (GetTransform() == nullptr)
@@ -147,6 +163,19 @@ std::shared_ptr<Transform> GameObject::GetOrAddTransform()
 
 	return GetTransform();
 }
+
+shared_ptr<Billboard> GameObject::GetBillboard()
+{
+	shared_ptr<Component> component = GetFixedComponent(ComponentType::Billboard);
+	return static_pointer_cast<Billboard>(component);
+}
+
+shared_ptr<SnowBillboard> GameObject::GetSnowBillboard()
+{
+	shared_ptr<Component> component = GetFixedComponent(ComponentType::SnowBillboard);
+	return static_pointer_cast<SnowBillboard>(component);
+}
+
 
 void GameObject::AddComponent(shared_ptr<Component> component)
 {

@@ -31,6 +31,9 @@
     <Filter Include="Game\Week3">
       <UniqueIdentifier>{88323496-af1c-4518-ba7d-da5e65c16451}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shaders\Week5">
+      <UniqueIdentifier>{c9c9832e-c186-4204-a11e-80d8bd7f5963}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -42,22 +45,16 @@
     <ClCompile Include="CameraScript.cpp">
       <Filter>Main\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="RawBufferDemo.cpp">
-      <Filter>Game</Filter>
+    <ClCompile Include="OrthographicDemo.cpp">
+      <Filter>Game\Week3</Filter>
     </ClCompile>
-    <ClCompile Include="GroupDemo.cpp">
-      <Filter>Game</Filter>
+    <ClCompile Include="ButtonDemo.cpp">
+      <Filter>Game\Week3</Filter>
     </ClCompile>
-    <ClCompile Include="TextureBufferDemo.cpp">
-      <Filter>Game</Filter>
+    <ClCompile Include="BillBoardDemo.cpp">
+      <Filter>Game\Week3</Filter>
     </ClCompile>
-    <ClCompile Include="StructureBufferDemo.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="ViewportDemo.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="CollisionDemo.cpp">
+    <ClCompile Include="SnowDemo.cpp">
       <Filter>Game\Week3</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,22 +68,16 @@
     <ClInclude Include="CameraScript.h">
       <Filter>Main\Camera</Filter>
     </ClInclude>
-    <ClInclude Include="RawBufferDemo.h">
-      <Filter>Game</Filter>
+    <ClInclude Include="OrthographicDemo.h">
+      <Filter>Game\Week3</Filter>
     </ClInclude>
-    <ClInclude Include="GroupDemo.h">
-      <Filter>Game</Filter>
+    <ClInclude Include="ButtonDemo.h">
+      <Filter>Game\Week3</Filter>
     </ClInclude>
-    <ClInclude Include="TextureBufferDemo.h">
-      <Filter>Game</Filter>
+    <ClInclude Include="BillBoardDemo.h">
+      <Filter>Game\Week3</Filter>
     </ClInclude>
-    <ClInclude Include="StructureBufferDemo.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="ViewportDemo.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="CollisionDemo.h">
+    <ClInclude Include="SnowDemo.h">
       <Filter>Game\Week3</Filter>
     </ClInclude>
   </ItemGroup>
@@ -180,6 +171,12 @@
     </FxCompile>
     <FxCompile Include="..\Shaders\27.StructureBufferDemo.fx">
       <Filter>Shaders\Week4</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\28.BillboardDemo.fx">
+      <Filter>Shaders\Week5</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\29.SnowDemo.fx">
+      <Filter>Shaders\Week5</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

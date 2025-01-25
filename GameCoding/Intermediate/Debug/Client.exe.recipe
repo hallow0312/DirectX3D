@@ -96,6 +96,12 @@
     <ContentFile>
       <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\27.StructureBufferDemo.cso</FullPath>
     </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\28.BillboardDemo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\2DGame\DirectX3D\GameCoding\Binaries\29.SnowDemo.cso</FullPath>
+    </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
